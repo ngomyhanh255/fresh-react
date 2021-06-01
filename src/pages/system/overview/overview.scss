@@ -1,0 +1,74 @@
+.device{
+    .cart__device{
+        width: 95%;
+        border-radius: 30px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        cursor: pointer;
+        
+       
+        &:hover {
+            box-shadow: 0 2rem 3rem rgba(1,0,0,.175)!important;
+
+          }
+     
+        .cart__img{
+            height: 150px;
+            width: 150px;
+        }   
+
+        .cart__title {
+            color: blue;
+            font-weight: 700;
+
+            .btnAuto{
+                font-size: 14px;
+            }
+
+            .btnOn{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.weather {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+
+    .card{
+        background-image: url("https://i.imgur.com/dpqZJV5.jpg");
+        background-size: cover;
+        width: 600px;
+        height: 350px;
+        border-radius: 20px;
+        box-shadow: 0px 8px 16px 4px #9E9E9E;
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+
+    .time-font {
+        font-size: 50px
+    }
+    
+    .sm-font {
+        font-size: 18px
+    }
+    
+    .med-font {
+        font-size: 28px
+    }
+    
+    .large-font {
+        font-size: 60px
+    }
+}
+
+
+
+
+
