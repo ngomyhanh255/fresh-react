@@ -11,9 +11,15 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="/home">Home</Nav.Link>
-                    <Nav.Link href="/about">About</Nav.Link>
-                    <NavDropdown title="My system" id="collasible-nav-dropdown">
+                    <Nav.Link href="/my-system/overview">Overview</Nav.Link>
+                    <Nav.Link href="/my-system/report">Report</Nav.Link>
+                    <Nav.Link   onClick={async () => {
+                                         await CustomDialog(<DialogSetting/>, {
+                                            title: 'Setting',
+                                            showCloseIcon: true,
+                                        });
+                                        }}>Setting</Nav.Link>
+                    {/* <NavDropdown title="My system" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="/my-system/overview">Overview</NavDropdown.Item>
                         <NavDropdown.Item href="/my-system/report">Report</NavDropdown.Item>
                         <NavDropdown.Item  onClick={async () => {
@@ -23,16 +29,16 @@ const Header = () => {
                                         });
                                         }}>
                         Setting</NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                     </Nav>
-                    <Nav>
+                    {/* <Nav>
                     <Nav.Link href="/login">
                         <Button variant="outline-light">Login</Button>
                     </Nav.Link>
                     <Nav.Link href="/register   ">
                     <   Button variant="outline-light">Register</Button>
                     </Nav.Link>
-                    </Nav>
+                    </Nav> */}
                 </Navbar.Collapse>
                 </Navbar>
       </div>

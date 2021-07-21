@@ -26,7 +26,7 @@ export default class DialogSetting extends Component {
         this.setState({
           hour:snap.val().pump.hour,
           minute:snap.val().pump.minute,
-          temperature:snap.val().light.temperature,
+          temperature:snap.val().light.setTem,
         })
     })
 
@@ -37,7 +37,7 @@ export default class DialogSetting extends Component {
        minute:parseInt(this.state.minute),
     });
     this.deviceRef.child('light').update({
-      temperature:parseInt(this.state.temperature)
+      setTem:parseInt(this.state.temperature)
    })
   };
 

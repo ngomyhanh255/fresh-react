@@ -8,6 +8,8 @@ export default class Weather extends Component{
         super(props);
          this.dht11Ref = FirebaseApp.database().ref("sensor");
          this.mhRef = FirebaseApp.database().ref("sensor/mh/");
+
+         this.timeRef = FirebaseApp.database().ref("time");
       }
     
       state={
@@ -33,7 +35,18 @@ export default class Weather extends Component{
         this.setState({
             time : timeC,
         })
+        this.timeRef.update({
+             year    : today.getFullYear(),
+             month   : today.getMonth()+1,
+             date    : today.getDate(),
+             hour    : today.getHours(),
+             minute  : today.getMinutes(),
+             second  : today.getSeconds(),
+
+          })
         }, 1000)
+
+        
       }
 
       
